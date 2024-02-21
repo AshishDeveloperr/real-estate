@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Real Estate</title>
+</head>
+    <style>
+        *{
+          font-family: 'Poppins', sans-serif;
+          margin: 0;
+          padding: 0;
+        } 
+
+
+        .background-section {
+        background-image: url('https://html.modernwebtemplates.com/realestate/images/slide01.jpg');
+        background-size: cover;
+        /* Add other styling properties as needed */
+    }
+    .section-opacity {
+        position: relative;
+        background-image: url('https://html.modernwebtemplates.com/realestate/images/parallax/Depositphotos_4601928_original.jpg');
+        background-size: cover;
+    }
+
+    .section-opacity:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(64, 64, 64, 0.8);
+    }
+    
+
+    </style>
+<body>
+    <section class="background-section">
+        <div class="container mx-auto px-5 md:px-20">
+            <div class="flex items-center">
+                <div class="w-28">
+                    <img src="https://html.modernwebtemplates.com/realestate/images/logo2.png" alt="logo">
+                </div>
+                <div>
+                    <h2 class="text-xl md:text-2xl font-semibold text-gray-900">8 (800) 695-2684</h2>
+                    <h3 class="text-base md:text-lg font-normal text-gray-500">realestate@agent.com</h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-3 py-10 md:py-40">
+                <div class="col-span-3 md:col-span-1 flex items-center flex-col justify-start">
+                    <div class="w-full">
+                        <h2 class="text-3xl md:text-7xl font-light text-pink-600">Lana Rowe</h2>
+                        <h5 class="text-lg font-medium text-gray-500 py-2">Get a free Cosultation</h5>
+                    </div>
+                    <div class="w-full py-10">
+                        <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 my-1" placeholder="Full Name" required />
+                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 my-1" placeholder="Email Address" required />
+                        <input type="text" id="country" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 my-1" placeholder="Country" required />
+                        <input type="text" id="zip-code" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 my-1" placeholder="Zip Code" required />
+                        <button type="submit" class="text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center my-2">RESERVE SLOT</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <section class="container mx-auto px-5 md:px-20 py-8 hidden md:block">
+        <div class="grid grid-cols-2">
+            <div class="col-span-1">
+                <ul class="flex space-x-5">
+                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">HOME</li>
+                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">BLOG</li>
+                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">PAGES</li>
+                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">PHOTOS</li>
+                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">CONTACT</li>
+                </ul>
+            </div>
+            <div class="col-span-1"></div>
+        </div>
+    </section>
+    <section class="bg-[#F8F5F4] py-10 md:py-20">
+        <div class="container mx-auto px-5 md:px-20">
+            <div class="grid grid-cols-2 md:gap-10">
+                <div class="col-span-2 md:col-span-1">
+                    <h2 class="text-2xl md:text-5xl font-light text-gray-500 mb-8">Hey, I'm Lana Rowe!</h2>
+                    <div class="grid grid-cols-3">
+                        <div class="col-span-3 md:col-span-1 h-full">
+                            <img src="https://html.modernwebtemplates.com/realestate/images/team/face_6.jpg" alt="hero" class="bg-cover bg-center object-cover w-full h-full rounded">
+                        </div>
+                        <div class="col-span-3 md:col-span-2 bg-white px-8 py-12 h-full">
+                            <h5>Lana Rowe is available for any type of home related services such as buying or selling, she's got you covered</h5>
+                            <button type="submit" class="text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center my-2">APPOINTMENT</button>                     
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 py-5">
+                        <div class="col-span-2 md:col-span-1">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
+                                        <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
+                                    </svg>
+                                    <span class="pl-1">
+                                        Professionaly qualified agent
+                                    </span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
+                                        <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
+                                    </svg>
+                                    <span class="pl-1">
+                                        Lana got badges from the Government
+                                    </span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
+                                        <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
+                                    </svg>
+                                    <span class="pl-1">
+                                        10+ years of expeirence
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
+                                        <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
+                                    </svg>
+                                    <span class="pl-1">
+                                        No Risk, No Penalty
+                                    </span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
+                                        <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
+                                    </svg>
+                                    <span class="pl-1">
+                                        Any type of home related services
+                                    </span>
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
+                                        <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
+                                    </svg>
+                                    <span class="pl-1">
+                                        Get it done with Lana!
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <h2 class="text-5xl font-light text-gray-500 mb-8">Testimonials</h2>
+                    <div class="relative font-inter antialiased">
+                        <main class="relative overflow-hidden">
+                            <div class="w-full">
+                                <!-- Accordion component -->
+                                <div class="divide-y divide-slate-200">
+                                    <!-- Accordion item 1 -->
+                                    <div class="py-2">
+                                        <h2>
+                                            <button id="faqs-title-01" type="button" class="flex items-center justify-between w-full text-left font-semibold py-2 bg-pink-700 text-white px-2" aria-expanded="false" aria-controls="faqs-text-01">
+                                                <span>
+                                                    We would like to sincerely thank you
+                                                </span>
+                                                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" />
+                                                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" />
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="faqs-text-01" role="region" aria-labelledby="faqs-title-01" class="bg-white grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out" style="grid-template-rows: 0fr; opacity: 0;">
+                                            <div class="overflow-hidden">
+                                                <div class="grid grid-cols-5 gap-4 py-5">
+                                                    <div class="col-span-1 flex justify-center">
+                                                        <img src="https://html.modernwebtemplates.com/realestate/images/team/face_4_70x70.jpg" alt="hero" class="rounded-full w-16 h-16">
+                                                    </div>
+                                                    <div class="col-span-4">
+                                                        <p class="text-base font-light text-gray-500">
+                                                            You have managed to facilitate a purchase of the house we thought could only be a dream & sell our house for price beyond our expectations - all within 30 days.
+                                                        </p>
+                                                        <p class="text-base font-normal text-gray-500 pt-3">Amy Willis, <span class="text-pink-600">Housewife</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Accordion item 1 -->
+                                    <div class="py-2">
+                                        <h2>
+                                            <button id="faqs-title-02" type="button" class="flex items-center justify-between w-full text-left font-semibold py-2 bg-pink-700 text-white px-2" aria-expanded="false" aria-controls="faqs-text-02">
+                                                <span>
+                                                    We would like to sincerely thank you
+                                                </span>
+                                                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" />
+                                                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" />
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="faqs-text-02" role="region" aria-labelledby="faqs-title-02" class="bg-white grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out" style="grid-template-rows: 0fr; opacity: 0;">
+                                            <div class="overflow-hidden">
+                                                <div class="grid grid-cols-5 gap-4 py-5">
+                                                    <div class="col-span-1 flex justify-center">
+                                                        <img src="https://html.modernwebtemplates.com/realestate/images/team/face_4_70x70.jpg" alt="hero" class="rounded-full w-16 h-16">
+                                                    </div>
+                                                    <div class="col-span-4">
+                                                        <p class="text-base font-light text-gray-500">
+                                                            You have managed to facilitate a purchase of the house we thought could only be a dream & sell our house for price beyond our expectations - all within 30 days.
+                                                        </p>
+                                                        <p class="text-base font-normal text-gray-500 pt-3">Amy Willis, <span class="text-pink-600">Housewife</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Accordion item 1 -->
+                                    <div class="py-2">
+                                        <h2>
+                                            <button id="faqs-title-03" type="button" class="flex items-center justify-between w-full text-left font-semibold py-2 bg-pink-700 text-white px-2" aria-expanded="false" aria-controls="faqs-text-03">
+                                                <span>
+                                                    We would like to sincerely thank you
+                                                </span>
+                                                <svg class="fill-white shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center transition duration-200 ease-out" />
+                                                    <rect y="7" width="16" height="2" rx="1" class="transform origin-center rotate-90 transition duration-200 ease-out" />
+                                                </svg>
+                                            </button>
+                                        </h2>
+                                        <div id="faqs-text-03" role="region" aria-labelledby="faqs-title-03" class="bg-white grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out" style="grid-template-rows: 0fr; opacity: 0;">
+                                            <div class="overflow-hidden">
+                                                <div class="grid grid-cols-5 gap-4 py-5">
+                                                    <div class="col-span-1 flex justify-center">
+                                                        <img src="https://html.modernwebtemplates.com/realestate/images/team/face_4_70x70.jpg" alt="hero" class="rounded-full w-16 h-16">
+                                                    </div>
+                                                    <div class="col-span-4">
+                                                        <p class="text-base font-light text-gray-500">
+                                                            You have managed to facilitate a purchase of the house we thought could only be a dream & sell our house for price beyond our expectations - all within 30 days.
+                                                        </p>
+                                                        <p class="text-base font-normal text-gray-500 pt-3">Amy Willis, <span class="text-pink-600">Housewife</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Accordion item 2 -->
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-opacity">
+        <div class="container mx-auto px-5 md:px-20 py-14 md:py-24 relative">
+            <div class="text-center">
+                <h2 class="text-6xl font-thin text-orange-500 pt-5 pb-4">Sunnyside</h2>
+                <h5 class="text-2xl font-extralight text-gray-300 pb-5">398 Alcalá Park, San Diego, California, United States</h5>
+            </div>
+            <div>
+                <ul class="flex flex-col md:flex-row justify-center md:space-x-8 py-5">
+                    <li class="text-lg font-normal text-white text-center">
+                        Area, sq <br>
+                        <span class="text-3xl font-bold text-pink-600">1700</span>
+                    </li>
+                    <li class="text-lg font-normal text-white text-center">
+                        Bedrooms <br>
+                        <span class="text-3xl font-bold text-pink-600">1700</span>
+                    </li>
+                    <li class="text-lg font-normal text-white text-center">
+                        Area, sq <br>
+                        <span class="text-3xl font-bold text-pink-600">1700</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex justify-center py-5">
+                <button type="submit" class="text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:outline-none focus:ring-pink-300 font-bold rounded-sm text-xl w-full sm:w-auto md:px-28 py-6 text-center my-2">$ 1 230 000</button>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto px-5 md:px-20 py-10 md:py-20">
+        <div class="text-center pb-10">
+            <h2 class="text-4xl font-extralight text-orange-500 pt-5 pb-4">Lana Rowe</h2>
+            <h5 class="text-6xl font-thin text-gray-600 pb-5">FEATURED HOUSES</h5>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-3 md:col-span-1 border border-gray-200 my-3">
+                <div class="relative">
+                    <span class="bg-orange-600 text-white text-sm px-5 absolute">SALE</span>
+                    <img src="https://html.modernwebtemplates.com/realestate/images/gallery/Depositphotos_6946692_original-400.jpg" alt="property" class="bg-cover bg-center object-cover w-full h-full">
+                </div>
+                <div class="py-6">
+                    <h3 class="text-xl font-normal text-gray-500 px-2 pb-1">33 Campus Point Drive</h3>
+                    <ul class="flex space-x-2">
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 3a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Zm0 12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5Zm12 0a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2Zm0-12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2Z"/>
+                                <path fill-rule="evenodd" d="M10 6.5c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM10 18c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm-4-4a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Zm12 0a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Z" clip-rule="evenodd"/>
+                            </svg>
+                            1700 sq
+                        </li>
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5h13m-13 0V18c0 .6.4 1 1 1h11c.6 0 1-.4 1-1v-6.5m-13 0V9c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v2.5M9 5h11c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1h-1"/>
+                            </svg>
+                            4 bedrooms 
+                        </li>
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13.4 4a6.5 6.5 0 0 0-6.9 4A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.4-3.4l2-2a2 2 0 0 1 2.8 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 1-7.9 6.5 6.5 0 0 0-5.6-6Z"/>
+                                <path d="M12.7 9.3a1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4l.3-.3V19a1 1 0 1 0 2 0v-6.6l.3.3a1 1 0 0 0 1.4-1.4l-2-2Z"/>
+                            </svg>                            
+                            2 baths
+                        </li>
+                    </ul>
+                </div>
+                <div class="pb-10">
+                    <p class="text-base font-light text-gray-500 px-2 pb-1">Lorem ipsum doloamet consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+                </div>
+            </div>
+            <div class="col-span-3 md:col-span-1 border border-gray-200 my-3">
+                <div class="relative">
+                    <span class="bg-pink-600 text-white text-sm px-5 absolute">RENT</span>
+                    <img src="https://html.modernwebtemplates.com/realestate/images/gallery/Depositphotos_69353457_mirror_400.jpg" alt="property" class="bg-cover bg-center object-cover w-full h-full">
+                </div>
+                <div class="py-6">
+                    <h3 class="text-xl font-normal text-gray-500 px-2 pb-1">95 Gilman Drive, Sacramento</h3>
+                    <ul class="flex space-x-2">
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 3a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Zm0 12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5Zm12 0a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2Zm0-12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2Z"/>
+                                <path fill-rule="evenodd" d="M10 6.5c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM10 18c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm-4-4a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Zm12 0a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Z" clip-rule="evenodd"/>
+                            </svg>
+                            2500 sq
+                        </li>
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5h13m-13 0V18c0 .6.4 1 1 1h11c.6 0 1-.4 1-1v-6.5m-13 0V9c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v2.5M9 5h11c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1h-1"/>
+                            </svg>
+                            3 bedrooms 
+                        </li>
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13.4 4a6.5 6.5 0 0 0-6.9 4A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.4-3.4l2-2a2 2 0 0 1 2.8 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 1-7.9 6.5 6.5 0 0 0-5.6-6Z"/>
+                                <path d="M12.7 9.3a1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4l.3-.3V19a1 1 0 1 0 2 0v-6.6l.3.3a1 1 0 0 0 1.4-1.4l-2-2Z"/>
+                            </svg>                            
+                            3 baths
+                        </li>
+                    </ul>
+                </div>
+                <div class="pb-10">
+                    <p class="text-base font-light text-gray-500 px-2 pb-1">Aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum stet clita kasd gubergren.</p>
+                </div>
+            </div>
+            <div class="col-span-3 md:col-span-1 border border-gray-200 my-3">
+                <div class="relative">
+                    <span class="bg-indigo-600 text-white text-sm px-5 absolute">SOLD</span>
+                    <img src="https://html.modernwebtemplates.com/realestate/images/gallery/Depositphotos_59028327_original-400.jpg" alt="property" class="bg-cover bg-center object-cover w-full h-full">
+                </div>
+                <div class="py-6">
+                    <h3 class="text-xl font-normal text-gray-500 px-2 pb-1">204 West Arbor Drive, San Diego</h3>
+                    <ul class="flex space-x-2">
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M5 3a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Zm0 12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5Zm12 0a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2Zm0-12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2Z"/>
+                                <path fill-rule="evenodd" d="M10 6.5c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM10 18c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm-4-4a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Zm12 0a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Z" clip-rule="evenodd"/>
+                            </svg>
+                            1360 sq
+                        </li>
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5h13m-13 0V18c0 .6.4 1 1 1h11c.6 0 1-.4 1-1v-6.5m-13 0V9c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v2.5M9 5h11c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1h-1"/>
+                            </svg>
+                            2 bedrooms 
+                        </li>
+                        <li class="text-base font-light text-gray-400 flex items-center px-2">
+                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13.4 4a6.5 6.5 0 0 0-6.9 4A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.4-3.4l2-2a2 2 0 0 1 2.8 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 1-7.9 6.5 6.5 0 0 0-5.6-6Z"/>
+                                <path d="M12.7 9.3a1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4l.3-.3V19a1 1 0 1 0 2 0v-6.6l.3.3a1 1 0 0 0 1.4-1.4l-2-2Z"/>
+                            </svg>                            
+                            2 baths
+                        </li>
+                    </ul>
+                </div>
+                <div class="pb-10">
+                    <p class="text-base font-light text-gray-500 px-2 pb-1">No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum damet consetetur sadipscing elitr, sed diam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-10" style="background: linear-gradient(to right,#f5772a 0%,#ee4f87 50%,#5961ac 100%);">
+        <div class="container mx-auto">
+            <div class="flex justify-center items-center flex-col md:flex-row">
+                <h2 class="text-3xl md:text-5xl font-bold text-white pr-4">Newsletter <span class="font-extralight">Subscribe:</span></h2>
+                <form action="#" class="pt-5 md:pt-0">
+                    <div class="items-center mx-auto space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+                        <div class="relative w-full">
+                            <label for="email" class="hidden mb-2 text-sm font-medium text-gray-900">Email address</label>
+                            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                            </div>
+                            <input class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-l border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Enter your email" type="email" id="email" required>
+                        </div>
+                        <div>
+                            <button type="submit" class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-r border cursor-pointer bg-pink-700 border-pink-600 hover:bg-pink-800 focus:ring-4 focus:ring-pink-300">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto px-5 md:px-20 py-12">
+        <div class="grid grid-cols-3 gap-5">
+            <div class="col-span-3 md:col-span-1 text-center border-b md:border-r border-gray-300 pb-8">
+                <h2 class="text-4xl font-extralight text-gray-500 py-4">Our Address:</h2>
+                <p class="text-base font-light text-gray-500">PO Box 97845 Baker st. 567,</p>
+                <p class="text-base font-light text-gray-500">Los Angeles, California, United States</p>
+            </div>
+            <div class="col-span-3 md:col-span-1 text-center border-b md:border-r border-gray-300 pb-8">
+                <h2 class="text-4xl font-extralight text-gray-500 py-4">Opening Hours:</h2>
+                <p class="text-base font-light text-gray-500">PO Box 97845 Baker st. 567,</p>
+                <p class="text-base font-light text-gray-500">Saturday 10:00 - 12:00</p>
+                <p class="text-base font-light text-gray-500">Sunday Closed</p>
+            </div>
+            <div class="col-span-3 md:col-span-1 text-center">
+                <h2 class="text-4xl font-extralight text-gray-500 py-4">Contact Us:</h2>
+                <p class="text-base font-light text-gray-500">8 (800) 695-2684</p>
+                <p class="text-base font-light text-pink-500">realestate@agent.com</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="w-full h-[35rem]">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.07561712382!2d80.86011197528525!3d26.84882128663024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1708549208415!5m2!1sen!2sin" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section class="py-10 bg-[#404040]">
+        <h2 class="text-center text-gray-300">© Real Estate Agent 2024</h2>
+    </section>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+       
+       const firstAccordionButton = document.getElementById('faqs-title-01');
+       firstAccordionButton.click();
+   });
+   
+   const accordionButtons = document.querySelectorAll('[aria-controls]');
+
+   
+   accordionButtons.forEach(button => {
+       button.addEventListener('click', function() {
+           
+           const contentId = this.getAttribute('aria-controls');
+           const content = document.getElementById(contentId);
+
+           
+           const isExpanded = this.getAttribute('aria-expanded') === 'true';
+           this.setAttribute('aria-expanded', !isExpanded);
+
+           
+           if (isExpanded) {
+               content.style.gridTemplateRows = '0fr';
+               content.style.opacity = '0';
+           } else {
+               content.style.gridTemplateRows = '1fr';
+               content.style.opacity = '1';
+           }
+       });
+   });
+</script>
+
+</html>
