@@ -29,6 +29,11 @@
                 background-position: left -680px top; 
             }
         }
+        @media screen and  (min-width: 1025px) {
+            .background-section {
+                background-position: left top; 
+            }
+        }
 
         .section-opacity {
             position: relative;
@@ -55,77 +60,69 @@
             background: white;
         }
 
-
-        /* mobile header */
-        @media (max-width: 576px) {
-    .content {
+    @media (min-width: 577px) {
+    .pt-scroll {
         padding-top: 51px;
     }
-}
 
-@media (min-width: 577px) {
-  .pt-scroll {
-    padding-top: 51px;
-  }
+    .nav-sticky {
+        position: fixed!important;
+        min-width: 100%;
+        top: 0;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+        transition: all .25s ease-in;
+        z-index: 1;
+    }
+    }
 
-  .nav-sticky {
-    position: fixed!important;
-    min-width: 100%;
-    top: 0;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
-    transition: all .25s ease-in;
-    z-index: 1;
-  }
-}
+    /* HAMBURGER MENU */
 
-/* HAMBURGER MENU */
+    .hamburger {
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    transition: all 0.25s;
+    }
 
-.hamburger {
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
-  transition: all 0.25s;
-}
+    .hamburger__top-bun,
+    .hamburger__bottom-bun {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+    }
 
-.hamburger__top-bun,
-.hamburger__bottom-bun {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background: #000;
-  transform: rotate(0);
-  transition: all 0.5s;
-}
+    .hamburger:hover [class*="-bun"] {
+    background: #333;
+    }
 
-.hamburger:hover [class*="-bun"] {
-  background: #333;
-}
+    .hamburger__top-bun {
+    transform: translateY(-5px);
+    }
 
-.hamburger__top-bun {
-  transform: translateY(-5px);
-}
+    .hamburger__bottom-bun {
+    transform: translateY(3px);
+    }
 
-.hamburger__bottom-bun {
-  transform: translateY(3px);
-}
+    .open {
+    transform: rotate(90deg);
+    transform: translateY(-1px);
+    }
 
-.open {
-  transform: rotate(90deg);
-  transform: translateY(-1px);
-}
+    .open .hamburger__top-bun {
+    transform:
+        rotate(45deg)
+        translateY(0px);
+    }
 
-.open .hamburger__top-bun {
-  transform:
-    rotate(45deg)
-    translateY(0px);
-}
-
-.open .hamburger__bottom-bun {
-  transform:
-    rotate(-45deg)
-    translateY(0px);
-}
+    .open .hamburger__bottom-bun {
+    transform:
+        rotate(-45deg)
+        translateY(0px);
+    }
     
 
     </style>
@@ -138,7 +135,7 @@
               <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
             </button>
           </div>
-          <div id="menu" class="list-none w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden">
+          <div id="menu" class="list-none w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden space-y-5">
                 <li class="text-base font-normal text-pink-500 pr-5 hover:text-pink-600 cursor-pointer">HOME</li>
                 <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">BLOG</li>
                 <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">PAGES</li>
@@ -175,8 +172,8 @@
             </div>
         </div> 
     </section>
-    <section class="container mx-auto px-5 xl:px-20 py-6 hidden md:block" id="header">
-        <div class="grid grid-cols-2">
+    <section class="px-5 xl:px-20 py-6 hidden md:block" id="header">
+        <div class="container mx-auto grid grid-cols-2">
             <div class="col-span-1 flex">
                 <ul class="flex space-x-5 items-center">
                     <li class="border-r border-gray-500 text-base font-normal text-pink-500 pr-5 hover:text-pink-600 cursor-pointer">HOME</li>
