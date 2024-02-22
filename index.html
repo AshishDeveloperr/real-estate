@@ -45,11 +45,109 @@
             left: 0;
             background-color: rgba(64, 64, 64, 0.8);
         }
+
+        /* header */
+        #header.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; 
+            background: white;
+        }
+
+
+        /* mobile header */
+        @media (max-width: 576px) {
+    .content {
+        padding-top: 51px;
+    }
+}
+
+@media (min-width: 577px) {
+  .pt-scroll {
+    padding-top: 51px;
+  }
+
+  .nav-sticky {
+    position: fixed!important;
+    min-width: 100%;
+    top: 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+    transition: all .25s ease-in;
+    z-index: 1;
+  }
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  transition: all 0.25s;
+}
+
+.hamburger__top-bun,
+.hamburger__bottom-bun {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger:hover [class*="-bun"] {
+  background: #333;
+}
+
+.hamburger__top-bun {
+  transform: translateY(-5px);
+}
+
+.hamburger__bottom-bun {
+  transform: translateY(3px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(-1px);
+}
+
+.open .hamburger__top-bun {
+  transform:
+    rotate(45deg)
+    translateY(0px);
+}
+
+.open .hamburger__bottom-bun {
+  transform:
+    rotate(-45deg)
+    translateY(0px);
+}
     
 
     </style>
 <body>
-    <section class="background-section">
+    <header id="top" class="w-full flex flex-col fixed sm:relative bg-white pin-t pin-r pin-l md:hidden z-[999]">
+        <nav id="site-menu" class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-3 bg-white shadow sm:shadow-none border-t-4 border-red-900">
+          <div class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
+            <a href="#" class="no-underline py-1 w-10"><img src="https://html.modernwebtemplates.com/realestate/images/logo2.png" alt="logo"></a>
+            <button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" onclick="navToggle();">
+              <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
+            </button>
+          </div>
+          <div id="menu" class="list-none w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden">
+                <li class="text-base font-normal text-pink-500 pr-5 hover:text-pink-600 cursor-pointer">HOME</li>
+                <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">BLOG</li>
+                <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">PAGES</li>
+                <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">PHOTOS</li>
+                <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">CONTACT</li>
+          </div>
+        </nav>
+    </header>
+    <section class="background-section pt-24 md:pt-0">
         <div class="container mx-auto px-5 xl:px-20">
             <div class="flex items-center">
                 <div class="w-28">
@@ -77,18 +175,37 @@
             </div>
         </div> 
     </section>
-    <section class="container mx-auto px-5 xl:px-20 py-8 hidden md:block">
+    <section class="container mx-auto px-5 xl:px-20 py-6 hidden md:block" id="header">
         <div class="grid grid-cols-2">
-            <div class="col-span-1">
-                <ul class="flex space-x-5">
-                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">HOME</li>
-                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">BLOG</li>
-                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">PAGES</li>
-                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">PHOTOS</li>
-                    <li class="border-r border-gray-500 text-base font-medium text-gray-500 pr-5">CONTACT</li>
+            <div class="col-span-1 flex">
+                <ul class="flex space-x-5 items-center">
+                    <li class="border-r border-gray-500 text-base font-normal text-pink-500 pr-5 hover:text-pink-600 cursor-pointer">HOME</li>
+                    <li class="border-r border-gray-500 text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">BLOG</li>
+                    <li class="border-r border-gray-500 text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">PAGES</li>
+                    <li class="border-r border-gray-500 text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">PHOTOS</li>
+                    <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">CONTACT</li>
                 </ul>
             </div>
-            <div class="col-span-1"></div>
+            <div class="col-span-1">
+                <ul class="flex space-x-4 justify-end items-center">
+                    <li class="bg-blue-600 text-white p-2 rounded-sm">
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M13.1 6H15V3h-1.9A4.1 4.1 0 0 0 9 7.1V9H7v3h2v10h3V12h2l.6-3H12V6.6a.6.6 0 0 1 .6-.6h.5Z" clip-rule="evenodd"/>
+                        </svg>                        
+                    </li>
+                    <li class="bg-[#1DA1F2] text-white p-2 rounded-sm">
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M22 5.9c-.7.3-1.5.5-2.4.6a4 4 0 0 0 1.8-2.2c-.8.5-1.6.8-2.6 1a4.1 4.1 0 0 0-6.7 1.2 4 4 0 0 0-.2 2.5 11.7 11.7 0 0 1-8.5-4.3 4 4 0 0 0 1.3 5.4c-.7 0-1.3-.2-1.9-.5a4 4 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.9 2.8c-1.8 1.3-4 2-6.1 1.7a11.7 11.7 0 0 0 10.7 1A11.5 11.5 0 0 0 20 8.5V8a10 10 0 0 0 2-2.1Z" clip-rule="evenodd"/>
+                          </svg>  
+                                             
+                    </li>
+                    <li class="bg-[#4285F4] text-white p-2 rounded-sm">
+                        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 22a10 10 0 0 1-7.1-3A9.9 9.9 0 0 1 5 4.8C7 3 9.5 2 12.2 2h.2c2.4 0 4.8 1 6.6 2.6l-2.5 2.3a6.2 6.2 0 0 0-4.2-1.6c-1.8 0-3.5.7-4.8 2a6.6 6.6 0 0 0-.1 9.3c1.2 1.3 2.9 2 4.7 2h.1a6 6 0 0 0 4-1.1c1-.9 1.8-2 2.1-3.4v-.2h-6v-3.4h9.6l.1 1.9c-.1 5.7-4 9.6-9.7 9.6H12Z" clip-rule="evenodd"/>
+                          </svg>                                            
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
     <section class="bg-[#F8F5F4] py-10 md:py-20">
@@ -112,7 +229,7 @@
                                     <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
                                         <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
                                     </svg>
-                                    <span class="pl-1">
+                                    <span class="pl-1 text-sm font-light">
                                         Professionaly qualified agent
                                     </span>
                                 </li>
@@ -120,7 +237,7 @@
                                     <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
                                         <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
                                     </svg>
-                                    <span class="pl-1">
+                                    <span class="pl-1 text-sm font-light">
                                         Lana got badges from the Government
                                     </span>
                                 </li>
@@ -128,7 +245,7 @@
                                     <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
                                         <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
                                     </svg>
-                                    <span class="pl-1">
+                                    <span class="pl-1 text-sm font-light">
                                         10+ years of expeirence
                                     </span>
                                 </li>
@@ -140,7 +257,7 @@
                                     <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
                                         <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
                                     </svg>
-                                    <span class="pl-1">
+                                    <span class="pl-1 text-sm font-light">
                                         No Risk, No Penalty
                                     </span>
                                 </li>
@@ -148,7 +265,7 @@
                                     <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
                                         <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
                                     </svg>
-                                    <span class="pl-1">
+                                    <span class="pl-1 text-sm font-light">
                                         Any type of home related services
                                     </span>
                                 </li>
@@ -156,7 +273,7 @@
                                     <svg class="text-pink-500" xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" viewBox="0 0 10.605 15.555">
                                         <polygon points="0 2.828 2.828 0 10.605 7.776 2.828 15.555 0 12.727 5.656 7.776 0 2.828"/>
                                     </svg>
-                                    <span class="pl-1">
+                                    <span class="pl-1 text-sm font-light">
                                         Get it done with Lana!
                                     </span>
                                 </li>
@@ -289,116 +406,6 @@
             </div>
         </div>
     </section>
-    <!-- <section class="container mx-auto px-5 md:px-20 py-10 md:py-20">
-        <div class="text-center pb-10">
-            <h2 class="text-4xl font-extralight text-orange-500 pt-5 pb-4">Robin Ritz</h2>
-            <h5 class="text-6xl font-thin text-gray-600 pb-5">FEATURED HOUSES</h5>
-        </div>
-        <div class="grid grid-cols-3 gap-4">
-            <div class="col-span-3 md:col-span-1 border border-gray-200 my-3">
-                <div class="relative">
-                    <span class="bg-orange-600 text-white text-sm px-5 absolute">SALE</span>
-                    <img src="https://html.modernwebtemplates.com/realestate/images/gallery/Depositphotos_6946692_original-400.jpg" alt="property" class="bg-cover bg-center object-cover w-full h-full">
-                </div>
-                <div class="py-6">
-                    <h3 class="text-xl font-normal text-gray-500 px-2 pb-1">33 Campus Point Drive</h3>
-                    <ul class="flex space-x-2">
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M5 3a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Zm0 12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5Zm12 0a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2Zm0-12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2Z"/>
-                                <path fill-rule="evenodd" d="M10 6.5c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM10 18c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm-4-4a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Zm12 0a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Z" clip-rule="evenodd"/>
-                            </svg>
-                            1700 sq
-                        </li>
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5h13m-13 0V18c0 .6.4 1 1 1h11c.6 0 1-.4 1-1v-6.5m-13 0V9c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v2.5M9 5h11c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1h-1"/>
-                            </svg>
-                            4 bedrooms 
-                        </li>
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M13.4 4a6.5 6.5 0 0 0-6.9 4A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.4-3.4l2-2a2 2 0 0 1 2.8 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 1-7.9 6.5 6.5 0 0 0-5.6-6Z"/>
-                                <path d="M12.7 9.3a1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4l.3-.3V19a1 1 0 1 0 2 0v-6.6l.3.3a1 1 0 0 0 1.4-1.4l-2-2Z"/>
-                            </svg>                            
-                            2 baths
-                        </li>
-                    </ul>
-                </div>
-                <div class="pb-10">
-                    <p class="text-base font-light text-gray-500 px-2 pb-1">Lorem ipsum doloamet consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
-                </div>
-            </div>
-            <div class="col-span-3 md:col-span-1 border border-gray-200 my-3">
-                <div class="relative">
-                    <span class="bg-pink-600 text-white text-sm px-5 absolute">RENT</span>
-                    <img src="https://html.modernwebtemplates.com/realestate/images/gallery/Depositphotos_69353457_mirror_400.jpg" alt="property" class="bg-cover bg-center object-cover w-full h-full">
-                </div>
-                <div class="py-6">
-                    <h3 class="text-xl font-normal text-gray-500 px-2 pb-1">95 Gilman Drive, Sacramento</h3>
-                    <ul class="flex space-x-2">
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M5 3a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Zm0 12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5Zm12 0a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2Zm0-12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2Z"/>
-                                <path fill-rule="evenodd" d="M10 6.5c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM10 18c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm-4-4a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Zm12 0a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Z" clip-rule="evenodd"/>
-                            </svg>
-                            2500 sq
-                        </li>
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5h13m-13 0V18c0 .6.4 1 1 1h11c.6 0 1-.4 1-1v-6.5m-13 0V9c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v2.5M9 5h11c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1h-1"/>
-                            </svg>
-                            3 bedrooms 
-                        </li>
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M13.4 4a6.5 6.5 0 0 0-6.9 4A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.4-3.4l2-2a2 2 0 0 1 2.8 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 1-7.9 6.5 6.5 0 0 0-5.6-6Z"/>
-                                <path d="M12.7 9.3a1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4l.3-.3V19a1 1 0 1 0 2 0v-6.6l.3.3a1 1 0 0 0 1.4-1.4l-2-2Z"/>
-                            </svg>                            
-                            3 baths
-                        </li>
-                    </ul>
-                </div>
-                <div class="pb-10">
-                    <p class="text-base font-light text-gray-500 px-2 pb-1">Aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum stet clita kasd gubergren.</p>
-                </div>
-            </div>
-            <div class="col-span-3 md:col-span-1 border border-gray-200 my-3">
-                <div class="relative">
-                    <span class="bg-indigo-600 text-white text-sm px-5 absolute">SOLD</span>
-                    <img src="https://html.modernwebtemplates.com/realestate/images/gallery/Depositphotos_59028327_original-400.jpg" alt="property" class="bg-cover bg-center object-cover w-full h-full">
-                </div>
-                <div class="py-6">
-                    <h3 class="text-xl font-normal text-gray-500 px-2 pb-1">204 West Arbor Drive, San Diego</h3>
-                    <ul class="flex space-x-2">
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M5 3a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Zm0 12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5Zm12 0a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2Zm0-12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2Z"/>
-                                <path fill-rule="evenodd" d="M10 6.5c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM10 18c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm-4-4a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Zm12 0a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Z" clip-rule="evenodd"/>
-                            </svg>
-                            1360 sq
-                        </li>
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5h13m-13 0V18c0 .6.4 1 1 1h11c.6 0 1-.4 1-1v-6.5m-13 0V9c0-.6.4-1 1-1h11c.6 0 1 .4 1 1v2.5M9 5h11c.6 0 1 .4 1 1v9c0 .6-.4 1-1 1h-1"/>
-                            </svg>
-                            2 bedrooms 
-                        </li>
-                        <li class="text-base font-light text-gray-400 flex items-center px-2">
-                            <svg class="w-4 h-4 mr-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M13.4 4a6.5 6.5 0 0 0-6.9 4A5 5 0 0 0 7 18h3v-4a2 2 0 0 1-1.4-3.4l2-2a2 2 0 0 1 2.8 0l2 2A2 2 0 0 1 14 14v4h4a4 4 0 0 0 1-7.9 6.5 6.5 0 0 0-5.6-6Z"/>
-                                <path d="M12.7 9.3a1 1 0 0 0-1.4 0l-2 2a1 1 0 1 0 1.4 1.4l.3-.3V19a1 1 0 1 0 2 0v-6.6l.3.3a1 1 0 0 0 1.4-1.4l-2-2Z"/>
-                            </svg>                            
-                            2 baths
-                        </li>
-                    </ul>
-                </div>
-                <div class="pb-10">
-                    <p class="text-base font-light text-gray-500 px-2 pb-1">No sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum damet consetetur sadipscing elitr, sed diam.</p>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section class="py-10" style="background: linear-gradient(to right,#f5772a 0%,#ee4f87 50%,#5961ac 100%);">
         <div class="container mx-auto">
             <div class="flex justify-center items-center flex-col md:flex-row">
@@ -440,13 +447,8 @@
             </div>
         </div>
     </section>
-    <!-- <section>
-        <div class="w-full h-[35rem]">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113911.07561712382!2d80.86011197528525!3d26.84882128663024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1708549208415!5m2!1sen!2sin" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </section> -->
     <section class="py-10 bg-[#404040]">
-        <h2 class="text-center text-gray-300">© Developed by Thesunmediahouse 2024</h2>
+        <h2 class="text-center text-gray-300">© Developed by <span class="text-pink-600">Thesunmediahouse</span> 2024</h2>
     </section>
 </body>
 <script>
@@ -454,6 +456,23 @@
        
        const firstAccordionButton = document.getElementById('faqs-title-01');
        firstAccordionButton.click();
+
+    //    header
+
+    var header = document.getElementById('header');
+    var headerOffset = header.offsetTop;
+
+    function handleScroll() {
+        if (window.pageYOffset > headerOffset) {
+            header.classList.add('fixed');
+        } else {
+            header.classList.remove('fixed');
+        }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+
    });
    
    const accordionButtons = document.querySelectorAll('[aria-controls]');
@@ -479,6 +498,29 @@
            }
        });
    });
+
+//    mobile header
+var nav = document.getElementById('site-menu');
+var header = document.getElementById('top');
+
+window.addEventListener('scroll', function() {
+  if (window.scrollY >=400) { 
+    nav.classList.add('nav-sticky');
+    header.classList.add('pt-scroll');
+  } else {
+    nav.classList.remove('nav-sticky');
+    header.classList.remove('pt-scroll');
+  }
+});
+
+function navToggle() {
+        var btn = document.getElementById('menuBtn');
+        var nav = document.getElementById('menu');
+
+        btn.classList.toggle('open');
+        nav.classList.toggle('flex');
+        nav.classList.toggle('hidden');
+    }
 </script>
 
 </html>
