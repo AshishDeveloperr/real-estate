@@ -16,7 +16,12 @@
           margin: 0;
           padding: 0;
         } 
-
+        .mobile-hero{
+            background-image: url('https://html.modernwebtemplates.com/realestate/images/slide01.jpg');
+            background-repeat: no-repeat;
+            background-position: right 0px top; 
+            background-size: cover; 
+        }
 
         .background-section {
             background-image: url('https://html.modernwebtemplates.com/realestate/images/slide01.jpg');
@@ -130,21 +135,44 @@
     <header id="top" class="w-full flex flex-col fixed sm:relative bg-white pin-t pin-r pin-l md:hidden z-[999]">
         <nav id="site-menu" class="flex flex-col sm:flex-row w-full justify-between items-center px-4 sm:px-6 py-3 bg-white shadow sm:shadow-none border-t-4 border-red-900">
           <div class="w-full sm:w-auto self-start sm:self-center flex flex-row sm:flex-none flex-no-wrap justify-between items-center">
-            <a href="#" class="no-underline py-1 w-10"><img src="https://html.modernwebtemplates.com/realestate/images/logo2.png" alt="logo"></a>
+            <a href="#" class="no-underline py-1 w-10"><img class="" src="https://html.modernwebtemplates.com/realestate/images/logo2.png" alt="logo"></a>
             <button id="menuBtn" class="hamburger block sm:hidden focus:outline-none" type="button" onclick="navToggle();">
               <span class="hamburger__top-bun"></span><span class="hamburger__bottom-bun"></span>
             </button>
           </div>
           <div id="menu" class="list-none w-full sm:w-auto self-end sm:self-center sm:flex flex-col sm:flex-row items-center h-full py-1 pb-4 sm:py-0 sm:pb-0 hidden space-y-5">
-                <li class="text-base font-normal text-pink-500 pr-5 hover:text-pink-600 cursor-pointer">HOME</li>
-                <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">BLOG</li>
-                <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">PAGES</li>
-                <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">PHOTOS</li>
-                <li class="text-base font-normal text-gray-500 pr-5 hover:text-pink-600 cursor-pointer">CONTACT</li>
-          </div>
+                <li class="text-base font-normal text-gray-500 pr-5">I Put the Ritz in Real Estate</li>
         </nav>
     </header>
-    <section class="background-section pt-24 md:pt-0">
+    <section class="pt-20 md:pt-0 md:hidden">
+        <div class="mobile-hero flex items-center pb-28">
+            <div class="w-16">
+                <img src="https://html.modernwebtemplates.com/realestate/images/logo2.png" alt="logo">
+            </div>
+            <div class="pl-1">
+                <h2 class="text-base md:text-2xl font-semibold text-gray-900">8 (800) 695-2684</h2>
+                <h3 class="text-sm md:text-lg font-normal text-gray-500">realestate@agent.com</h3>
+            </div>
+        </div>
+        <div class="container mx-auto px-5 xl:px-20">
+            <div class="grid grid-cols-3 py-10 md:py-40">
+                <div class="col-span-3 md:col-span-1 flex items-center flex-col justify-start">
+                    <div class="w-full">
+                        <h2 class="text-3xl md:text-7xl font-light text-pink-600">Robin Ritz</h2>
+                        <h5 class="text-lg font-medium text-gray-500 py-2">Get a free Cosultation</h5>
+                    </div>
+                    <div class="w-full py-10">
+                        <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 my-1" placeholder="Full Name" required />
+                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 my-1" placeholder="Email Address" required />
+                        <input type="text" id="country" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 my-1" placeholder="Country" required />
+                        <input type="text" id="zip-code" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-pink-500 focus:border-pink-500 block w-full p-2.5 my-1" placeholder="Zip Code" required />
+                        <button type="submit" class="text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:outline-none focus:ring-pink-300 font-medium rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center my-2">RESERVE SLOT</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <section class="background-section pt-24 md:pt-0 hidden md:block">
         <div class="container mx-auto px-5 xl:px-20">
             <div class="flex items-center">
                 <div class="w-28">
@@ -426,12 +454,12 @@
     </section>
     <section class="container mx-auto px-5 xl:px-20 py-12">
         <div class="grid grid-cols-3 gap-5">
-            <div class="col-span-3 md:col-span-1 text-center border-b md:border-r border-gray-300 pb-8">
+            <div class="col-span-3 md:col-span-1 text-center border-b md:border-r md:border-b-0 border-gray-300 pb-8">
                 <h2 class="text-4xl font-extralight text-gray-500 py-4">Our Address:</h2>
                 <p class="text-base font-light text-gray-500">PO Box 97845 Baker st. 567,</p>
                 <p class="text-base font-light text-gray-500">Los Angeles, California, United States</p>
             </div>
-            <div class="col-span-3 md:col-span-1 text-center border-b md:border-r border-gray-300 pb-8">
+            <div class="col-span-3 md:col-span-1 text-center border-b md:border-r md:border-b-0 border-gray-300 pb-8">
                 <h2 class="text-4xl font-extralight text-gray-500 py-4">Opening Hours:</h2>
                 <p class="text-base font-light text-gray-500">PO Box 97845 Baker st. 567,</p>
                 <p class="text-base font-light text-gray-500">Saturday 10:00 - 12:00</p>
